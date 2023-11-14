@@ -44,7 +44,7 @@ router.get("/todos/:todoId", (req, res, next) => {
       message: "The todoId field is required.",
     });
   }
-›
+
   const foundTodo = todos.find((e) => e.id === todoId);
   if (!foundTodo) {
     return res.status(404).json({
